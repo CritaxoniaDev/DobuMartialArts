@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule - DoBu Martial Arts</title>
+    
+    <!-- CSS Plugin -->
+    <link rel="stylesheet" href="/components/styles/styles.css">
+    <link href="/components/resources/dobu-logo.png" rel="icon" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/components/scripts/config.js"></script>
+</head>
+
+<body class="font-inter pt-24 bg-gray-50">
+    <div id="header-container"></div>
+
+    <!-- Schedule Header Section -->
+    <section class="py-20 bg-black text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-playfair font-bold mb-6">Class Schedule</h1>
+            <p class="text-xl max-w-2xl mx-auto">Find the perfect time to start your martial arts journey</p>
+        </div>
+    </section>
+
+    <!-- Schedule Table Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden border-2 border-yellow-500">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="py-4 px-6 text-left">Time</th>
+                                <th class="py-4 px-6">Monday</th>
+                                <th class="py-4 px-6">Tuesday</th>
+                                <th class="py-4 px-6">Wednesday</th>
+                                <th class="py-4 px-6">Thursday</th>
+                                <th class="py-4 px-6">Friday</th>
+                                <th class="py-4 px-6">Saturday</th>
+                                <th class="py-4 px-6">Sunday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-6 font-bold">6:00-7:30</td>
+                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
+                                <td class="py-4 px-6 text-center bg-red-50">Karate</td>
+                                <td class="py-4 px-6 text-center bg-green-50">Judo</td>
+                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
+                                <td class="py-4 px-6 text-center bg-purple-50">Muay Thai</td>
+                                <td class="py-4 px-6 text-center text-red-500 bg-gray-100 opacity-60">No Classes</td>
+                                <td class="py-4 px-6 text-center text-red-500 bg-gray-100 opacity-60">No Classes</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-6 font-bold">8:00-10:00</td>
+                                <td class="py-4 px-6 text-center bg-purple-50">Muay Thai</td>
+                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
+                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
+                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
+                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
+                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
+                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-6 font-bold">10:30-12:00</td>
+                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
+                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
+                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
+                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
+                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
+                                <td class="py-4 px-6 text-center bg-green-50">Judo</td>
+                                <td class="py-4 px-6 text-center bg-red-50">Karate</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-6 font-bold">13:00-14:30</td>
+                                <td class="py-4 px-6 text-center bg-gray-50">Open mat/Personal Practice</td>
+                                <td class="py-4 px-6 text-center bg-gray-50">Open mat/Personal Practice</td>
+                                <td class="py-4 px-6 text-center bg-gray-50">Open mat/Personal Practice</td>
+                                <td class="py-4 px-6 text-center bg-gray-50">Open mat/Personal Practice</td>
+                                <td class="py-4 px-6 text-center bg-gray-50">Open mat/Personal Practice</td>
+                                <td class="py-4 px-6 text-center bg-red-50">Karate</td>
+                                <td class="py-4 px-6 text-center bg-green-50">Judo</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-6 font-bold">15:00-17:00</td>
+                                <td class="py-4 px-6 text-center bg-blue-50">Kids Jiu-Jitsu</td>
+                                <td class="py-4 px-6 text-center bg-green-50">Kids Judo</td>
+                                <td class="py-4 px-6 text-center bg-red-50">Kids Karate</td>
+                                <td class="py-4 px-6 text-center bg-blue-50">Kids Jiu-Jitsu</td>
+                                <td class="py-4 px-6 text-center bg-green-50">Kids Judo</td>
+                                <td class="py-4 px-6 text-center bg-purple-50">Muay Thai</td>
+                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-6 font-bold">17:30-19:00</td>
+                                <td class="py-4 px-6 text-center bg-red-50">Karate</td>
+                                <td class="py-4 px-6 text-center bg-purple-50">Muay Thai</td>
+                                <td class="py-4 px-6 text-center bg-green-50">Judo</td>
+                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
+                                <td class="py-4 px-6 text-center bg-purple-50">Muay Thai</td>
+                                <td class="py-4 px-6 text-center text-red-500 bg-gray-100 opacity-60">No Classes</td>
+                                <td class="py-4 px-6 text-center text-red-500 bg-gray-100 opacity-60">No Classes</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="py-4 px-6 font-bold">19:00-21:00</td>
+                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
+                                <td class="py-4 px-6 text-center bg-green-50">Judo</td>
+                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
+                                <td class="py-4 px-6 text-center bg-red-50">Karate</td>
+                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
+                                <td class="py-4 px-6 text-center text-red-500 bg-gray-100 opacity-60">No Classes</td>
+                                <td class="py-4 px-6 text-center text-red-500 bg-gray-100 opacity-60">No Classes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Information Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-playfair font-bold text-center mb-16">Class Information</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-500">
+                    <h3 class="font-bold text-xl mb-4">Jiu-Jitsu</h3>
+                    <p class="text-gray-600">Ground-based grappling and submission techniques. Suitable for all levels.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-red-500">
+                    <h3 class="font-bold text-xl mb-4">Karate</h3>
+                    <p class="text-gray-600">Traditional Japanese striking art focusing on discipline and technique.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-green-500">
+                    <h3 class="font-bold text-xl mb-4">Judo</h3>
+                    <p class="text-gray-600">Olympic sport emphasizing throws and ground control.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-purple-500">
+                    <h3 class="font-bold text-xl mb-4">Muay Thai</h3>
+                    <p class="text-gray-600">Thai boxing incorporating strikes with fists, elbows, knees, and shins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Notes Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-yellow-500">
+                <h3 class="text-2xl font-bold mb-6">Important Notes</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-yellow-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Please arrive 10 minutes before class starts
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-yellow-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Private tuition must be booked in advance
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-yellow-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Schedule subject to change during holidays
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#header-container").load("components/header.html");
+            $("#footer-container").load("components/footer.html");
+        });
+    </script>
+</body>
+
+</html>

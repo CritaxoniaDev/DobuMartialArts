@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DoBu Martial Arts</title>
+    <link href="/components/resources/dobu-logo.png" rel="icon" type="image/png">
+    <!-- CSS Plugin -->
+    <link rel="stylesheet" href="/components/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/components/scripts/config.js"></script>
+</head>
+<body class="font-inter pt-24 bg-gray-50">
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-black text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl font-playfair font-bold mb-6">Get in Touch</h1>
+                <p class="text-xl text-gray-400">Start your martial arts journey today or visit our world-class facility</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Grid Section -->
+    <section class="py-20 -mt-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Location Card -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-yellow-500 hover:transform hover:scale-105 transition duration-300">
+                    <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Visit Us</h3>
+                    <p class="text-gray-600 text-center">123 Martial Arts Way<br>London, UK EC1A 1BB</p>
+                </div>
+
+                <!-- Contact Card -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-yellow-500 hover:transform hover:scale-105 transition duration-300">
+                    <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Call Us</h3>
+                    <p class="text-gray-600 text-center">+44 20 7123 4567<br>+44 20 7123 4568</p>
+                </div>
+
+                <!-- Email Card -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-yellow-500 hover:transform hover:scale-105 transition duration-300">
+                    <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Email Us</h3>
+                    <p class="text-gray-600 text-center">info@dobu.com<br>support@dobu.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Form -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-yellow-500">
+                    <h2 class="text-3xl font-playfair font-bold mb-8">Send Us a Message</h2>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                <option>General Inquiry</option>
+                                <option>Membership Information</option>
+                                <option>Class Schedule</option>
+                                <option>Private Training</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-black text-white font-semibold py-3 rounded-lg hover:bg-gray-800 transition duration-300">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Map -->
+                <div class="rounded-xl overflow-hidden shadow-lg h-[600px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.2889661026223!2d-0.0989351!3d51.5141554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM0LCsDQ5JzI5LjIiTiA3McKwMzUnNTcuNyJX!5e0!3m2!1sen!2suk!4v1234567890"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Hours Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="bg-black text-white rounded-xl p-8 shadow-lg">
+                <h2 class="text-3xl font-playfair font-bold mb-8 text-center">Business Hours</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <h3 class="font-bold text-yellow-500 mb-4">Weekdays</h3>
+                        <p>Monday - Friday<br>6:00 AM - 9:00 PM</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-yellow-500 mb-4">Saturday</h3>
+                        <p>8:00 AM - 6:00 PM</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-yellow-500 mb-4">Sunday</h3>
+                        <p>8:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#header-container").load("components/header.html");
+            $("#footer-container").load("components/footer.html");
+        });
+    </script>
+</body>
+</html>

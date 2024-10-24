@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - DoBu Martial Arts</title>
+
+    <!-- CSS Plugin -->
+    <link rel="stylesheet" href="/components/styles/styles.css">
+
+    <link href="/components/resources/dobu-logo.png" rel="icon" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/components/scripts/config.js"></script>
+</head>
+
+
+<body class="font-inter pt-10 bg-gray-100">
+    <div id="header-container"></div>
+
+    <div class="min-h-screen pt-24 pb-12 flex flex-col justify-center bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-md mx-auto">
+                <!-- Logo and Title -->
+                <div class="text-center mb-8">
+                    <div class="relative">
+                        <img src="/components/resources/dobu-logo.png" alt="DoBu Logo"
+                            class="w-24 h-24 mx-auto mb-4 rounded-full shadow-xl border-4 border-yellow-500 transform hover:scale-105 transition duration-300">
+                        <div
+                            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-semibold">
+                            Premium Member
+                        </div>
+                    </div>
+                    <h2
+                        class="text-4xl font-playfair font-bold bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+                        Create Your Account
+                    </h2>
+                    <p class="text-gray-600 mt-2">Join the elite DoBu Martial Arts community</p>
+                </div>
+
+                <!-- Signup Form -->
+                <div class="bg-white rounded-xl shadow-2xl p-8 border-2 border-yellow-500 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-40 h-40 bg-yellow-500 opacity-10 rounded-full transform translate-x-20 -translate-y-20">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-40 h-40 bg-black opacity-10 rounded-full transform -translate-x-20 translate-y-20">
+                    </div>
+
+                    <form id="signupForm" class="space-y-6 relative">
+                        <div class="flex gap-4">
+                            <div class="flex-1">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" id="firstName" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300">
+                            </div>
+                            <div class="flex-1">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" id="lastName" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                            <div class="relative">
+                                <input type="password" id="password" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300">
+                                <button type="button"
+                                    class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Martial Arts</label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label
+                                    class="flex items-center space-x-2 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer transition duration-300">
+                                    <input type="checkbox" name="martialArts" value="karate" class="text-yellow-500">
+                                    <span>Karate</span>
+                                </label>
+                                <label
+                                    class="flex items-center space-x-2 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer transition duration-300">
+                                    <input type="checkbox" name="martialArts" value="jiujitsu" class="text-yellow-500">
+                                    <span>Jiu-Jitsu</span>
+                                </label>
+                                <label
+                                    class="flex items-center space-x-2 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer transition duration-300">
+                                    <input type="checkbox" name="martialArts" value="muaythai" class="text-yellow-500">
+                                    <span>Muay Thai</span>
+                                </label>
+                                <label
+                                    class="flex items-center space-x-2 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer transition duration-300">
+                                    <input type="checkbox" name="martialArts" value="judo" class="text-yellow-500">
+                                    <span>Judo</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" required class="text-yellow-500">
+                                <span class="text-sm text-gray-600">I agree to the Terms of Service and Privacy
+                                    Policy</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" class="text-yellow-500">
+                                <span class="text-sm text-gray-600">Subscribe to our newsletter for updates and special
+                                    offers</span>
+                            </label>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-black text-white font-semibold py-4 rounded-lg hover:bg-gray-800 transform hover:scale-105 transition duration-300 shadow-xl">
+                            Create Premium Account
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Login Link -->
+                <div class="text-center mt-8 space-y-4">
+                    <p class="text-gray-600">
+                        Already have an account?
+                        <a href="/login" class="text-yellow-500 hover:text-yellow-600 font-semibold">Log in</a>
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <button class="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition duration-300">
+                            <i class="fab fa-google text-2xl text-gray-700 hover:text-red-500 transition-colors"></i>
+                        </button>
+                        <button class="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition duration-300">
+                            <i class="fab fa-facebook text-2xl text-gray-700 hover:text-blue-600 transition-colors"></i>
+                        </button>
+                        <button class="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition duration-300">
+                            <i class="fab fa-apple text-2xl text-gray-700 hover:text-black transition-colors"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#header-container").load("components/header.html");
+            $("#footer-container").load("components/footer.html");
+        });
+
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const userData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                password: document.getElementById('password').value,
+                martialArts: Array.from(document.querySelectorAll('input[name="martialArts"]:checked')).map(cb => cb.value),
+                newsletter: document.querySelector('input[type="checkbox"][class="text-yellow-500"]:last-of-type').checked,
+                registrationDate: new Date().toISOString(),
+                membershipStatus: 'Premium'
+            };
+
+            // Get existing users or initialize empty array
+            const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+
+            // Check if email already exists
+            if (existingUsers.some(user => user.email === userData.email)) {
+                alert('This email is already registered. Please login or use a different email.');
+                return;
+            }
+
+            // Add new user
+            existingUsers.push(userData);
+
+            // Save to localStorage
+            localStorage.setItem('users', JSON.stringify(existingUsers));
+
+            // Create session for logged in user
+            localStorage.setItem('currentUser', JSON.stringify({
+                firstName: userData.firstName,
+                lastName: userData.lastName,
+                email: userData.email,
+                phone: userData.phone,
+                martialArts: userData.martialArts,
+                membershipStatus: userData.membershipStatus,
+                registrationDate: userData.registrationDate
+            }));
+
+            // Show success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg';
+            successMessage.textContent = 'Account created successfully! Redirecting...';
+            document.body.appendChild(successMessage);
+
+            // Redirect after delay
+            setTimeout(() => {
+                window.location.href = '/confirmation.html';
+            }, 2000);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const togglePasswordButton = document.querySelector('button[type="button"]');
+            const passwordInput = document.getElementById('password');
+
+            togglePasswordButton.addEventListener('click', function () {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+
+                const icon = this.querySelector('svg');
+                if (type === 'text') {
+                    icon.innerHTML = `
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            `;
+                } else {
+                    icon.innerHTML = `
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+            `;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>DoBu Martial Arts</title>
+
+    <!-- CSS Plugin -->
+    <link rel="stylesheet" href="/components/styles/styles.css">
+
+    <link href="/components/resources/dobu-logo.png" rel="icon" type="image/png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Plugin for JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Script For Tailwind Plugin -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/components/scripts/config.js"></script>
+    <script src="/components/scripts/index.js"></script>
+</head>
+
+<body class="font-inter pt-24">
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen">
+        <div class="carousel relative h-full">
+            <!-- Slide 1 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                <div class="absolute inset-0">
+                    <img src="/components/resources/images/background-pic.jpg" alt="Martial Arts Training"
+                        class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                </div>
+                <div class="relative container mx-auto px-6 h-full flex items-center">
+                    <div class="text-white max-w-2xl">
+                        <h1 class="font-playfair text-5xl md:text-7xl font-bold mb-6">Master Your Journey</h1>
+                        <p class="text-xl mb-8">Discover the art of self-discipline, strength, and confidence through
+                            martial arts excellence.</p>
+                        <a href="#"
+                            class="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300">Start
+                            Training</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                <div class="absolute inset-0">
+                    <img src="/components/resources/images/background-pic2.jpg" alt="Martial Arts Classes"
+                        class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                </div>
+                <div class="relative container mx-auto px-6 h-full flex items-center">
+                    <div class="text-white max-w-2xl">
+                        <h1 class="font-playfair text-5xl md:text-7xl font-bold mb-6">Expert Instruction</h1>
+                        <p class="text-xl mb-8">Train with certified masters and unlock your full potential in martial
+                            arts.</p>
+                        <a href="#"
+                            class="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300">Meet
+                            Our Instructors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                <div class="absolute inset-0">
+                    <img src="/components/resources/images/background-pic3.jpg" alt="Training Facilities"
+                        class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                </div>
+                <div class="relative container mx-auto px-6 h-full flex items-center">
+                    <div class="text-white max-w-2xl">
+                        <h1 class="font-playfair text-5xl md:text-7xl font-bold mb-6">World-Class Facilities</h1>
+                        <p class="text-xl mb-8">Train in our state-of-the-art dojo equipped with premium amenities.</p>
+                        <a href="#"
+                            class="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300">View
+                            Facilities</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full p-2 transition duration-300"
+                id="prevSlide">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full p-2 transition duration-300"
+                id="nextSlide">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+
+            <!-- Slide Indicators -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <button
+                    class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition duration-300"></button>
+                <button
+                    class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition duration-300"></button>
+                <button
+                    class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition duration-300"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div
+                        class="bg-black text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Expert Training</h3>
+                    <p class="text-gray-600">Learn from certified instructors with years of experience in multiple
+                        martial arts disciplines.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-black text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Modern Facilities</h3>
+                    <p class="text-gray-600">State-of-the-art training areas, equipment, and amenities for the best
+                        experience.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-black text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">All Skill Levels</h3>
+                    <p class="text-gray-600">Programs designed for beginners to advanced practitioners, ensuring proper
+                        progression.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Preview Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-playfair font-bold text-center mb-16">Our Classes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Karate Card -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="/components/resources/assets/karate.jpg" alt="Karate Class"
+                        class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-white text-2xl font-bold mb-2">Karate</h3>
+                        <p class="text-gray-200">Traditional Japanese martial art focusing on strikes and blocks.</p>
+                    </div>
+                </div>
+
+                <!-- Jiu-Jitsu Card -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="/components/resources/assets/jiu-jitsu.jpg" alt="Brazilian Jiu-Jitsu"
+                        class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-white text-2xl font-bold mb-2">Jiu-Jitsu</h3>
+                        <p class="text-gray-200">Ground-based grappling and submission techniques.</p>
+                    </div>
+                </div>
+
+                <!-- Kickboxing Card -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="/components/resources/assets/kickboxing.jpg" alt="Kickboxing"
+                        class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-white text-2xl font-bold mb-2">Kickboxing</h3>
+                        <p class="text-gray-200">High-energy striking combining boxing and kicking techniques.</p>
+                    </div>
+                </div>
+
+                <!-- Muay Thai Card -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="/components/resources/assets/muay-thai.jpg" alt="Muay Thai"
+                        class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-white text-2xl font-bold mb-2">Muay Thai</h3>
+                        <p class="text-gray-200">Traditional Thai boxing with powerful strikes and clinch techniques.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Judo Card -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="/components/resources/assets/judo.jpg" alt="Judo"
+                        class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-white text-2xl font-bold mb-2">Judo</h3>
+                        <p class="text-gray-200">Japanese martial art focusing on throws and grappling techniques.</p>
+                    </div>
+                </div>
+
+                <!-- Kids Classes Card -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="/components/resources/assets/kids-classes.jpg" alt="Kids Classes"
+                        class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-white text-2xl font-bold mb-2">Kids Classes</h3>
+                        <p class="text-gray-200">Age-appropriate martial arts training for children and youth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-black text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-playfair font-bold mb-8">Start Your Journey Today</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Join our community of dedicated martial artists and transform
+                your life through discipline, respect, and personal growth.</p>
+            <div class="flex justify-center gap-6">
+                <a href="#"
+                    class="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300">Free
+                    Trial Class</a>
+                <a href="#"
+                    class="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition duration-300">View
+                    Schedule</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-playfair font-bold text-center mb-16">What Our Students Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-600">Karate Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Training at DoBu has completely transformed my confidence and physical
+                        abilities. The instructors are exceptional!"</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Mike Chen</h4>
+                            <p class="text-gray-600">BJJ Practitioner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The BJJ program here is world-class. I've learned so much and made great
+                        friends along the way."</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Emma Davis</h4>
+                            <p class="text-gray-600">Kickboxing Enthusiast</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The kickboxing classes are intense and fun. I've never been in better
+                        shape!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#header-container").load("components/header.html");
+        $("#footer-container").load("components/footer.html");
+    });
+</script>
+
+</html>

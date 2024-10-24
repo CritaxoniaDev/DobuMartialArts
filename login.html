@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DoBu Martial Arts</title>
+
+    <!-- CSS Plugin -->
+    <link rel="stylesheet" href="/components/styles/styles.css">
+
+    <link href="/components/resources/dobu-logo.png" rel="icon" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/components/scripts/config.js"></script>
+</head>
+
+<body class="font-inter">
+    <div id="header-container"></div>
+
+    <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 pt-24 pb-12 flex flex-col justify-center">
+        <div class="container mx-auto px-6">
+            <div class="max-w-md mx-auto">
+                <!-- Logo and Title -->
+                <div class="text-center mb-8">
+                    <div class="relative inline-block">
+                        <img src="/components/resources/dobu-logo.png" alt="DoBu Logo"
+                            class="w-24 h-24 rounded-full shadow-xl border-4 border-yellow-500 transform hover:scale-105 transition duration-300">
+                        <div
+                            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-1 rounded-full text-sm font-semibold">
+                            Member Access
+                        </div>
+                    </div>
+                    <h2
+                        class="text-4xl font-playfair font-bold mt-6 bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+                        Welcome Back
+                    </h2>
+                    <p class="text-gray-600 mt-2">Continue your martial arts journey</p>
+                </div>
+
+                <!-- Login Form -->
+                <div class="bg-white rounded-xl shadow-2xl p-8 border-2 border-yellow-500 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-40 h-40 bg-yellow-500 opacity-10 rounded-full transform translate-x-20 -translate-y-20">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-40 h-40 bg-black opacity-10 rounded-full transform -translate-x-20 translate-y-20">
+                    </div>
+
+                    <form id="loginForm" class="space-y-6 relative">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <input type="email" id="email" required
+                                    class="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <input type="password" id="password" required
+                                    class="w-full pl-10 pr-10 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300">
+                                <button type="button" id="togglePassword"
+                                    class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" class="text-yellow-500 rounded">
+                                <span class="text-sm text-gray-600">Remember me</span>
+                            </label>
+                            <a href="#" class="text-sm text-yellow-500 hover:text-yellow-600 font-semibold">Forgot
+                                password?</a>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-black text-white font-semibold py-4 rounded-lg hover:bg-gray-800 transform hover:scale-105 transition duration-300 shadow-xl flex items-center justify-center space-x-2">
+                            <span>Sign In</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Social Login -->
+                <div class="text-center mt-8 space-y-4">
+                    <p class="text-gray-600">Or continue with</p>
+                    <div class="flex justify-center space-x-4">
+                        <button class="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition duration-300">
+                            <i class="fab fa-google text-xl text-gray-700 hover:text-red-500 transition-colors"></i>
+                        </button>
+                        <button class="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition duration-300">
+                            <i class="fab fa-facebook text-xl text-gray-700 hover:text-blue-600 transition-colors"></i>
+                        </button>
+                        <button class="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition duration-300">
+                            <i class="fab fa-apple text-xl text-gray-700 hover:text-black transition-colors"></i>
+                        </button>
+                    </div>
+                    <p class="text-gray-600 mt-6">
+                        Don't have an account?
+                        <a href="/signup" class="text-yellow-500 hover:text-yellow-600 font-semibold">Sign up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#header-container").load("components/header.html");
+            $("#footer-container").load("components/footer.html");
+
+            // Toggle password visibility
+            document.getElementById('togglePassword').addEventListener('click', function () {
+                const password = document.getElementById('password');
+                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+                this.querySelector('i').classList.toggle('fa-eye');
+                this.querySelector('i').classList.toggle('fa-eye-slash');
+            });
+
+            // Handle login form submission
+            document.getElementById('loginForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+
+                // Get users from localStorage
+                const users = JSON.parse(localStorage.getItem('users') || '[]');
+                const user = users.find(u => u.email === email && u.password === password);
+
+                if (user) {
+                    // Set current user session
+                    localStorage.setItem('currentUser', JSON.stringify({
+                        firstName: user.firstName,
+                        lastName: user.lastName,
+                        email: user.email,
+                        martialArts: user.martialArts,
+                        membershipStatus: user.membershipStatus
+                    }));
+
+                    // Show success message
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg';
+                    successMessage.textContent = 'Login successful! Redirecting...';
+                    document.body.appendChild(successMessage);
+
+                    // Redirect to dashboard
+                    setTimeout(() => {
+                        window.location.href = '/dashboard.html';
+                    }, 1500);
+                } else {
+                    alert('Invalid email or password');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<header class="bg-black text-white fixed top-0 left-0 right-0 z-50">
+    <style>
+        #mobileMenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+        }
+
+        #mobileMenu.show {
+            max-height: 500px;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 1, 1);
+        }
+
+        .icon-transition {
+            transition: transform 0.3s ease;
+        }
+
+        .rotate-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+
+    <nav class="container mx-auto px-6 py-6">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="/components/resources/dobu-logo.png" alt="DoBu Logo" class="w-12 h-12 rounded-full">
+                <a href="/" class="text-3xl text-yellow-500 font-bold tracking-tighter font-playfair">DoBu Martial
+                    Arts</a>
+            </div>
+
+            <button id="menuBtn" class="md:hidden text-white focus:outline-none icon-transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path class="hamburger" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                    <path class="close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <div class="tracking-tighter flex items-center space-x-8">
+                    <a href="/"
+                        class="relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Home</a>
+                    <a href="about.html"
+                        class="relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">About</a>
+                    <a href="classes.html"
+                        class="relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Classes</a>
+                    <a href="schedule.html"
+                        class="relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Schedule</a>
+                    <a href="contact.html"
+                        class="relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="login.html"
+                        class="px-4 py-2 text-white border border-white rounded-full hover:bg-white hover:text-black transition-all duration-300">Login</a>
+                    <a href="signup.html"
+                        class="px-4 py-2 bg-yellow-500 text-black rounded-full hover:bg-yellow-400 transition-all duration-300 font-semibold">Sign
+                        Up</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="md:hidden">
+            <div class="flex flex-col space-y-4 pt-4">
+                <a href="/" class="text-white hover:text-yellow-500 transition-colors duration-300">Home</a>
+                <a href="about.html" class="text-white hover:text-yellow-500 transition-colors duration-300">About</a>
+                <a href="classes.html"
+                    class="text-white hover:text-yellow-500 transition-colors duration-300">Classes</a>
+                <a href="schedule.html"
+                    class="text-white hover:text-yellow-500 transition-colors duration-300">Schedule</a>
+                <a href="contact.html"
+                    class="text-white hover:text-yellow-500 transition-colors duration-300">Contact</a>
+                <div class="flex flex-col space-y-2 pt-4 border-t border-gray-700">
+                    <a href="login.html"
+                        class="px-4 py-2 text-center text-white border border-white rounded-full hover:bg-white hover:text-black transition-all duration-300">Login</a>
+                    <a href="signup.html"
+                        class="px-4 py-2 text-center bg-yellow-500 text-black rounded-full hover:bg-yellow-400 transition-all duration-300 font-semibold">Sign
+                        Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburger = menuBtn.querySelector('.hamburger');
+        const close = menuBtn.querySelector('.close');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+            menuBtn.classList.toggle('rotate-icon');
+            hamburger.classList.toggle('hidden');
+            close.classList.toggle('hidden');
+        });
+    </script>
+</header>
