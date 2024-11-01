@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Schedule - DoBu Martial Arts</title>
-    
+
     <!-- CSS Plugin -->
     <link rel="stylesheet" href="/components/styles/styles.css">
     <link href="/components/resources/dobu-logo.png" rel="icon" type="image/png">
@@ -18,6 +18,47 @@
     <script src="/components/scripts/config.js"></script>
 </head>
 
+<style>
+    .timeline-container {
+        position: relative;
+    }
+
+    .timeline-line {
+        position: absolute;
+        left: 24px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #e5e7eb;
+    }
+
+    .timeline-item {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.4s ease-out;
+    }
+
+    .timeline-item.appear {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .timeline-dot {
+        position: absolute;
+        left: 20px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #FCD34D;
+        transform: translateY(50%);
+    }
+
+    .day-pill.active {
+        background-color: #000;
+        color: white;
+    }
+</style>
+
 <body class="font-inter pt-24 bg-gray-50">
     <div id="header-container"></div>
 
@@ -29,98 +70,38 @@
         </div>
     </section>
 
-    <!-- Schedule Table Section -->
+    <!-- Enhanced Schedule Section -->
     <section class="py-20">
         <div class="container mx-auto px-6">
-            <div class="bg-white rounded-lg shadow-xl overflow-hidden border-2 border-yellow-500">
-                <div class="overflow-x-auto">
-                    <table class="w-full">
-                        <thead>
-                            <tr class="bg-black text-white">
-                                <th class="py-4 px-6 text-left">Time</th>
-                                <th class="py-4 px-6">Monday</th>
-                                <th class="py-4 px-6">Tuesday</th>
-                                <th class="py-4 px-6">Wednesday</th>
-                                <th class="py-4 px-6">Thursday</th>
-                                <th class="py-4 px-6">Friday</th>
-                                <th class="py-4 px-6">Saturday</th>
-                                <th class="py-4 px-6">Sunday</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b hover:bg-gray-50">
-                                <td class="py-4 px-6 font-bold">6:00-7:30</td>
-                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
-                                <td class="py-4 px-6 text-center bg-red-50">Karate</td>
-                                <td class="py-4 px-6 text-center bg-green-50">Judo</td>
-                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
-                                <td class="py-4 px-6 text-center bg-purple-50">Muay Thai</td>
-                                <td class="py-4 px-6 text-center text-red-500 bg-gray-100 opacity-60">No Classes</td>
-                                <td class="py-4 px-6 text-center text-red-500 bg-gray-100 opacity-60">No Classes</td>
-                            </tr>
-                            <tr class="border-b hover:bg-gray-50">
-                                <td class="py-4 px-6 font-bold">8:00-10:00</td>
-                                <td class="py-4 px-6 text-center bg-purple-50">Muay Thai</td>
-                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
-                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
-                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
-                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
-                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
-                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
-                            </tr>
-                            <tr class="border-b hover:bg-gray-50">
-                                <td class="py-4 px-6 font-bold">10:30-12:00</td>
-                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
-                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
-                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
-                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
-                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
-                                <td class="py-4 px-6 text-center bg-green-50">Judo</td>
-                                <td class="py-4 px-6 text-center bg-red-50">Karate</td>
-                            </tr>
-                            <tr class="border-b hover:bg-gray-50">
-                                <td class="py-4 px-6 font-bold">13:00-14:30</td>
-                                <td class="py-4 px-6 text-center bg-gray-50">Open mat/Personal Practice</td>
-                                <td class="py-4 px-6 text-center bg-gray-50">Open mat/Personal Practice</td>
-                                <td class="py-4 px-6 text-center bg-gray-50">Open mat/Personal Practice</td>
-                                <td class="py-4 px-6 text-center bg-gray-50">Open mat/Personal Practice</td>
-                                <td class="py-4 px-6 text-center bg-gray-50">Open mat/Personal Practice</td>
-                                <td class="py-4 px-6 text-center bg-red-50">Karate</td>
-                                <td class="py-4 px-6 text-center bg-green-50">Judo</td>
-                            </tr>
-                            <tr class="border-b hover:bg-gray-50">
-                                <td class="py-4 px-6 font-bold">15:00-17:00</td>
-                                <td class="py-4 px-6 text-center bg-blue-50">Kids Jiu-Jitsu</td>
-                                <td class="py-4 px-6 text-center bg-green-50">Kids Judo</td>
-                                <td class="py-4 px-6 text-center bg-red-50">Kids Karate</td>
-                                <td class="py-4 px-6 text-center bg-blue-50">Kids Jiu-Jitsu</td>
-                                <td class="py-4 px-6 text-center bg-green-50">Kids Judo</td>
-                                <td class="py-4 px-6 text-center bg-purple-50">Muay Thai</td>
-                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
-                            </tr>
-                            <tr class="border-b hover:bg-gray-50">
-                                <td class="py-4 px-6 font-bold">17:30-19:00</td>
-                                <td class="py-4 px-6 text-center bg-red-50">Karate</td>
-                                <td class="py-4 px-6 text-center bg-purple-50">Muay Thai</td>
-                                <td class="py-4 px-6 text-center bg-green-50">Judo</td>
-                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
-                                <td class="py-4 px-6 text-center bg-purple-50">Muay Thai</td>
-                                <td class="py-4 px-6 text-center text-red-500 bg-gray-100 opacity-60">No Classes</td>
-                                <td class="py-4 px-6 text-center text-red-500 bg-gray-100 opacity-60">No Classes</td>
-                            </tr>
-                            <tr class="border-b hover:bg-gray-50">
-                                <td class="py-4 px-6 font-bold">19:00-21:00</td>
-                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
-                                <td class="py-4 px-6 text-center bg-green-50">Judo</td>
-                                <td class="py-4 px-6 text-center bg-blue-50">Jiu-Jitsu</td>
-                                <td class="py-4 px-6 text-center bg-red-50">Karate</td>
-                                <td class="py-4 px-6 text-center bg-yellow-50">Private Tuition</td>
-                                <td class="py-4 px-6 text-center text-red-500 bg-gray-100 opacity-60">No Classes</td>
-                                <td class="py-4 px-6 text-center text-red-500 bg-gray-100 opacity-60">No Classes</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <!-- Day Selection Pills -->
+            <div class="flex flex-wrap justify-center gap-4 mb-10">
+                <button
+                    class="day-pill active px-6 py-3 rounded-full bg-black text-white hover:bg-yellow-500 transition-all"
+                    data-day="monday">Monday</button>
+                <button
+                    class="day-pill px-6 py-3 rounded-full bg-gray-200 hover:bg-yellow-500 hover:text-white transition-all"
+                    data-day="tuesday">Tuesday</button>
+                <button
+                    class="day-pill px-6 py-3 rounded-full bg-gray-200 hover:bg-yellow-500 hover:text-white transition-all"
+                    data-day="wednesday">Wednesday</button>
+                <button
+                    class="day-pill px-6 py-3 rounded-full bg-gray-200 hover:bg-yellow-500 hover:text-white transition-all"
+                    data-day="thursday">Thursday</button>
+                <button
+                    class="day-pill px-6 py-3 rounded-full bg-gray-200 hover:bg-yellow-500 hover:text-white transition-all"
+                    data-day="friday">Friday</button>
+                <button
+                    class="day-pill px-6 py-3 rounded-full bg-gray-200 hover:bg-yellow-500 hover:text-white transition-all"
+                    data-day="saturday">Saturday</button>
+                <button
+                    class="day-pill px-6 py-3 rounded-full bg-gray-200 hover:bg-yellow-500 hover:text-white transition-all"
+                    data-day="sunday">Sunday</button>
+            </div>
+
+            <!-- Timeline Container -->
+            <div id="schedule-container" class="timeline-container relative pl-14 space-y-8">
+                <div class="timeline-line"></div>
+                <!-- Timeline items will be dynamically inserted here -->
             </div>
         </div>
     </section>
@@ -186,6 +167,174 @@
     <div id="footer-container"></div>
 
     <script>
+        // Schedule Data
+        const scheduleData = {
+            monday: [
+                { time: "6:00-7:30", class: "Jiu-Jitsu", color: "blue" },
+                { time: "8:00-10:00", class: "Muay Thai", color: "purple" },
+                { time: "10:30-12:00", class: "Private Tuition", color: "yellow" },
+                { time: "13:00-14:30", class: "Open Mat", color: "gray" },
+                { time: "15:00-17:00", class: "Kids Jiu-Jitsu", color: "blue" },
+                { time: "17:30-19:00", class: "Karate", color: "red" },
+                { time: "19:00-21:00", class: "Jiu-Jitsu", color: "blue" }
+            ],
+            tuesday: [
+                { time: "6:00-7:30", class: "Karate", color: "red" },
+                { time: "8:00-10:00", class: "Private Tuition", color: "yellow" },
+                { time: "10:30-12:00", class: "Private Tuition", color: "yellow" },
+                { time: "13:00-14:30", class: "Open Mat", color: "gray" },
+                { time: "15:00-17:00", class: "Kids Judo", color: "green" },
+                { time: "17:30-19:00", class: "Muay Thai", color: "purple" },
+                { time: "19:00-21:00", class: "Judo", color: "green" }
+            ],
+            wednesday: [
+                { time: "6:00-7:30", class: "Judo", color: "green" },
+                { time: "8:00-10:00", class: "Private Tuition", color: "yellow" },
+                { time: "10:30-12:00", class: "Private Tuition", color: "yellow" },
+                { time: "13:00-14:30", class: "Open Mat", color: "gray" },
+                { time: "15:00-17:00", class: "Kids Karate", color: "red" },
+                { time: "17:30-19:00", class: "Judo", color: "green" },
+                { time: "19:00-21:00", class: "Jiu-Jitsu", color: "blue" }
+            ],
+            thursday: [
+                { time: "6:00-7:30", class: "Jiu-Jitsu", color: "blue" },
+                { time: "8:00-10:00", class: "Private Tuition", color: "yellow" },
+                { time: "10:30-12:00", class: "Private Tuition", color: "yellow" },
+                { time: "13:00-14:30", class: "Open Mat", color: "gray" },
+                { time: "15:00-17:00", class: "Kids Jiu-Jitsu", color: "blue" },
+                { time: "17:30-19:00", class: "Jiu-Jitsu", color: "blue" },
+                { time: "19:00-21:00", class: "Karate", color: "red" }
+            ],
+            friday: [
+                { time: "6:00-7:30", class: "Muay Thai", color: "purple" },
+                { time: "8:00-10:00", class: "Jiu-Jitsu", color: "blue" },
+                { time: "10:30-12:00", class: "Private Tuition", color: "yellow" },
+                { time: "13:00-14:30", class: "Open Mat", color: "gray" },
+                { time: "15:00-17:00", class: "Kids Judo", color: "green" },
+                { time: "17:30-19:00", class: "Muay Thai", color: "purple" },
+                { time: "19:00-21:00", class: "Private Tuition", color: "yellow" }
+            ],
+            saturday: [
+                { time: "6:00-7:30", class: "No Classes", color: "gray" },
+                { time: "8:00-10:00", class: "Private Tuition", color: "yellow" },
+                { time: "10:30-12:00", class: "Judo", color: "green" },
+                { time: "13:00-14:30", class: "Karate", color: "red" },
+                { time: "15:00-17:00", class: "Muay Thai", color: "purple" },
+                { time: "17:30-19:00", class: "No Classes", color: "gray" },
+                { time: "19:00-21:00", class: "No Classes", color: "gray" }
+            ],
+            sunday: [
+                { time: "6:00-7:30", class: "No Classes", color: "gray" },
+                { time: "8:00-10:00", class: "Private Tuition", color: "yellow" },
+                { time: "10:30-12:00", class: "Karate", color: "red" },
+                { time: "13:00-14:30", class: "Judo", color: "green" },
+                { time: "15:00-17:00", class: "Jiu-Jitsu", color: "blue" },
+                { time: "17:30-19:00", class: "No Classes", color: "gray" },
+                { time: "19:00-21:00", class: "No Classes", color: "gray" }
+            ]
+        };
+
+        function formatTime(timeString) {
+            const [start, end] = timeString.split('-');
+
+            function convert12Hour(time) {
+                const [hours, minutes] = time.split(':');
+                const hour = parseInt(hours);
+                const ampm = hour >= 12 ? 'PM' : 'AM';
+                const hour12 = hour % 12 || 12;
+                return `${hour12}:${minutes}${ampm}`;
+            }
+
+            return `${convert12Hour(start)} - ${convert12Hour(end)}`;
+        }
+
+        function createTimelineItem(classInfo) {
+            const descriptions = {
+                "Jiu-Jitsu": "Ground-based grappling and submission techniques",
+                "Karate": "Traditional Japanese striking art",
+                "Judo": "Olympic sport emphasizing throws and control",
+                "Muay Thai": "Thai boxing with strikes, elbows, knees, and shins",
+                "Private Tuition": "One-on-one personalized training",
+                "Open Mat": "Self-directed practice time",
+                "Kids Jiu-Jitsu": "Youth-focused grappling fundamentals",
+                "Kids Judo": "Youth-focused throwing techniques",
+                "Kids Karate": "Youth-focused striking basics",
+                "No Classes": "No scheduled classes at this time"
+            };
+
+            const formattedTime = formatTime(classInfo.time);
+
+            return `
+        <div class="timeline-item relative">
+            <div class="timeline-dot"></div>
+            <div class="bg-white rounded-lg shadow-lg p-6 ml-4 border-l-4 border-${classInfo.color}-500 hover:shadow-xl transition-shadow duration-300">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                    <span class="text-lg font-bold text-gray-800">${formattedTime}</span>
+                    <span class="px-3 py-1 rounded-full bg-${classInfo.color}-100 text-${classInfo.color}-800 text-sm font-semibold mt-2 md:mt-0">
+                        ${classInfo.class}
+                    </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">${descriptions[classInfo.class]}</p>
+                ${classInfo.class !== "No Classes" ? `
+                    <button onclick="bookClass('${classInfo.class}', '${formattedTime}')" 
+                            class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-full text-sm transition-colors duration-300">
+                        Book Class
+                    </button>
+                ` : ''}
+            </div>
+        </div>
+    `;
+        }
+
+        function updateSchedule(day) {
+            const container = document.getElementById('schedule-container');
+            container.style.opacity = '0';
+
+            setTimeout(() => {
+                container.innerHTML = '<div class="timeline-line"></div>';
+
+                scheduleData[day].forEach((classInfo, index) => {
+                    const timelineItem = document.createElement('div');
+                    timelineItem.className = 'timeline-item';
+                    timelineItem.style.transitionDelay = `${index * 0.1}s`;
+                    timelineItem.innerHTML = createTimelineItem(classInfo);
+                    container.appendChild(timelineItem);
+                });
+
+                container.style.opacity = '1';
+
+                setTimeout(() => {
+                    document.querySelectorAll('.timeline-item').forEach(item => {
+                        item.classList.add('appear');
+                    });
+                }, 50);
+            }, 300);
+        }
+
+        function bookClass(className, timeSlot) {
+            alert(`Booking ${className} for ${timeSlot}`);
+            // Add your booking logic here
+        }
+
+        // Event Listeners
+        document.querySelectorAll('.day-pill').forEach(pill => {
+            pill.addEventListener('click', (e) => {
+                document.querySelectorAll('.day-pill').forEach(p => {
+                    p.classList.remove('active', 'bg-black', 'text-white');
+                    p.classList.add('bg-gray-200');
+                });
+
+                e.target.classList.add('active', 'bg-black', 'text-white');
+                e.target.classList.remove('bg-gray-200');
+
+                updateSchedule(e.target.dataset.day);
+            });
+        });
+
+        // Initialize with Monday's schedule
+        updateSchedule('monday');
+
+        // Header and Footer Loading
         $(document).ready(function () {
             $("#header-container").load("components/header.html");
             $("#footer-container").load("components/footer.html");

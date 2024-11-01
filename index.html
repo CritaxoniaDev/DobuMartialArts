@@ -23,11 +23,37 @@
     <!-- Plugin for JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Added Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- Script For Tailwind Plugin -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/components/scripts/config.js"></script>
     <script src="/components/scripts/index.js"></script>
 </head>
+
+<style>
+    .swiper-slide {
+        height: auto !important;
+    }
+    
+    .testimonial-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .swiper-pagination-bullet-active {
+        background-color: #F59E0B !important;
+    }
+</style>
 
 <body class="font-inter pt-24">
     <div id="header-container"></div>
@@ -265,40 +291,103 @@
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-playfair font-bold text-center mb-16">What Our Students Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
-                        <div>
-                            <h4 class="font-bold">Sarah Johnson</h4>
-                            <p class="text-gray-600">Karate Student</p>
+
+            <div class="swiper testimonialSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide h-[250px]">
+                        <div class="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                                    <img src="/components/resources/testimonials/sarah.jpg" alt="Sarah Johnson"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h4 class="font-bold text-lg">Sarah Johnson</h4>
+                                    <p class="text-gray-600">Karate Student</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 flex-grow">Training at DoBu has completely transformed my confidence
+                                and physical abilities. The instructors are exceptional!</p>
                         </div>
                     </div>
-                    <p class="text-gray-600">"Training at DoBu has completely transformed my confidence and physical
-                        abilities. The instructors are exceptional!"</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
-                        <div>
-                            <h4 class="font-bold">Mike Chen</h4>
-                            <p class="text-gray-600">BJJ Practitioner</p>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide h-[250px]">
+                        <div class="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                                    <img src="/components/resources/testimonials/mike.jpg" alt="Mike Chen"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h4 class="font-bold text-lg">Mike Chen</h4>
+                                    <p class="text-gray-600">BJJ Practitioner</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 flex-grow">The BJJ program here is world-class. I've learned so much
+                                and made great friends along the way.</p>
                         </div>
                     </div>
-                    <p class="text-gray-600">"The BJJ program here is world-class. I've learned so much and made great
-                        friends along the way."</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
-                        <div>
-                            <h4 class="font-bold">Emma Davis</h4>
-                            <p class="text-gray-600">Kickboxing Enthusiast</p>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide h-[250px]">
+                        <div class="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                                    <img src="/components/resources/testimonials/emma.jpg" alt="Emma Davis"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h4 class="font-bold text-lg">Emma Davis</h4>
+                                    <p class="text-gray-600">Kickboxing Enthusiast</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 flex-grow">The kickboxing classes are intense and fun. I've never
+                                been in better shape!</p>
                         </div>
                     </div>
-                    <p class="text-gray-600">"The kickboxing classes are intense and fun. I've never been in better
-                        shape!"</p>
+
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide h-[250px]">
+                        <div class="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                                    <img src="/components/resources/testimonials/david.jpg" alt="David Kim"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h4 class="font-bold text-lg">David Kim</h4>
+                                    <p class="text-gray-600">Judo Champion</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 flex-grow">The Judo program at DoBu helped me achieve my competitive
+                                goals. The coaching is top-notch and the facility is excellent.</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="swiper-slide h-[250px]">
+                        <div class="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                                    <img src="/components/resources/testimonials/lisa.jpg" alt="Lisa Martinez"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h4 class="font-bold text-lg">Lisa Martinez</h4>
+                                    <p class="text-gray-600">Muay Thai Fighter</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 flex-grow">DoBu's Muay Thai training has given me the skills and
+                                confidence to compete at a high level. The community here is incredible!</p>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="swiper-button-next text-yellow-500"></div>
+                <div class="swiper-button-prev text-yellow-500"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -309,6 +398,43 @@
     $(document).ready(function () {
         $("#header-container").load("components/header.html");
         $("#footer-container").load("components/footer.html");
+    });
+</script>
+
+<script>
+    const testimonialSwiper = new Swiper('.testimonialSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+        },
     });
 </script>
 
